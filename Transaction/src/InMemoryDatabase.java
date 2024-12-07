@@ -8,7 +8,8 @@ public class InMemoryDatabase {
 
     public void begin_transaction() {
         if (isActive) {
-            throw new IllegalStateException("A transaction is already active.");
+            System.out.println("A transaction is already active.");
+            return;
         }
         tempStore = new HashMap<>(mainStore);
         isActive = true;
@@ -16,7 +17,8 @@ public class InMemoryDatabase {
 
     public void put(String key, Integer value) {
         if (!isActive) {
-            throw new IllegalStateException("put() cannot be called outside of a transaction.");
+            System.out.println("put() cannot be called outside of a transaction.");
+            return;
         }
         tempStore.put(key, value);
     }
@@ -27,7 +29,8 @@ public class InMemoryDatabase {
 
     public void commit() {
         if (!isActive) {
-            throw new IllegalStateException("No active transaction to commit.");
+            System.out.println("No active transaction to commit.");
+            return;
         }
         mainStore.clear();
         mainStore.putAll(tempStore);
@@ -37,7 +40,8 @@ public class InMemoryDatabase {
 
     public void rollback() {
         if (!isActive) {
-            throw new IllegalStateException("No active transaction to rollback.");
+            System.out.println("No active transaction to rollback.");
+            return;
         }
         tempStore = null;
         isActive = false;
