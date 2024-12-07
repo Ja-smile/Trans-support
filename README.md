@@ -14,7 +14,7 @@ Using any IDE, open the project folder (./src).
 To run the program, run the Main.java file.
 The output should be as follows: 
 
-[Output Screenshot](https://github.com/Ja-smile/Trans-support/blob/main/Screenshot%202024-12-06%20193005.png)
+[Output Screenshot](https://github.com/Ja-smile/Trans-support/blob/main/Screenshot%202024-12-06%20195402.png)
 
 ## Future Modifications
 The instructions of the assignment were very detailed and effective for understanding, especially with the provided function calls and their expected behavior. The biggest challenge that I faced for familiarizing myself with the undermining information to understand the purpose of the application. Although the external resources were good, I still had to explore additional material for error handling. Additionally, resources on how to write a good ReadMe would be nice for this assignment as well as easier ones (example resource: https://www.makeareadme.com/).
